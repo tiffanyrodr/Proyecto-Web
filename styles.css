@@ -147,3 +147,30 @@ nav a:hover {
   color: #000; 
   margin-bottom: 0.5rem;
 }
+
+#contacto {
+  background-color: #f1e5b7; 
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#contacto h2 {
+  color: #000; 
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#contacto a {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #eacc86;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#contacto a:hover {
+  background-color: #f1db87;
+}

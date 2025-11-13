@@ -174,3 +174,11 @@ nav a:hover {
 #contacto a:hover {
   background-color: #f1db87;
 }
+
+footer {
+  background-color: #eacc86;
+  color: #000;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}

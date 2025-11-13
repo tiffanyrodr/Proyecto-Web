@@ -30,7 +30,8 @@ header {
 
 header h1 {
   font-size: 1.5rem; 
-  color: #111; 
+  color: #000; 
+  font-weight: bold;
 }
 
 nav ul {
@@ -41,7 +42,7 @@ nav ul {
 }
 
 nav a {
-  color: #333;
+  color: #000; 
   font-weight: 600;
   transition: color 0.3s ease; 
 }
@@ -53,7 +54,7 @@ nav a:hover {
 #inicio {
   padding: 5rem 2rem; 
   text-align: center; 
-  background-color: #f1e5b7; 
+  background-color: #f3e4a5; 
 }
 
 #inicio p {
@@ -74,13 +75,48 @@ nav a:hover {
   text-align: center; 
   font-size: 2rem; 
   margin-bottom: 2rem; 
-  color: #eacc86; 
+  color: #000; 
 }
 
 #sobre-mi p {
   max-width: 800px; 
   margin: 0 auto 1rem auto; 
-  line-height: 1.0; 
+  line-height: 1.8; 
   text-align: justify; 
 }
 
+#habilidades {
+  background-color: #f3e4a5; 
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#habilidades h2 {
+  font-size: 2rem;
+  color: #000; 
+  margin-bottom: 2rem;
+}
+
+#habilidades ul {
+  list-style: none; 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 1rem; 
+  padding: 0;
+}
+
+#habilidades li {
+  background-color: #fff; 
+  border: 2px solid #f3e08c; 
+  border-radius: 10px; 
+  padding: 1rem 2rem; 
+  font-weight: bold; 
+  color: #000; 
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+#habilidades li:hover {
+  transform: scale(1.05); 
+  background-color: #e2e3da; 
+}

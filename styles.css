@@ -17,5 +17,35 @@ a {
 }
 
 a:hover {
-  color: #e85a8e; 
+  color: #f1db87; 
+}
+
+header {
+  background-color: #eacc86; 
+  position: sticky; 
+  top: 0; 
+  z-index: 100; 
+  padding: 1rem 2rem; 
+}
+
+header h1 {
+  font-size: 1.5rem; 
+  color: #111; 
+}
+
+nav ul {
+  list-style: none; 
+  display: flex; 
+  justify-content: flex-end; 
+  gap: 1.5rem; 
+}
+
+nav a {
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease; 
+}
+
+nav a:hover {
+  color: #e2e3da; 
 }

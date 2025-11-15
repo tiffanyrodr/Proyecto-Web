@@ -86,39 +86,48 @@ nav a:hover {
 }
 
 #habilidades {
-  background-color: #f3e4a5; 
+  background-color: #f3e4a5;
   padding: 4rem 2rem;
   text-align: center;
 }
 
 #habilidades h2 {
   font-size: 2rem;
-  color: #000; 
+  color: #000;
   margin-bottom: 2rem;
 }
 
-#habilidades ul {
-  list-style: none; 
-  display: flex; 
-  flex-wrap: wrap; 
-  justify-content: center; 
-  gap: 1rem; 
-  padding: 0;
+.contenedor-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-#habilidades li {
-  background-color: #fff; 
-  border: 2px solid #f3e08c; 
-  border-radius: 10px; 
-  padding: 1rem 2rem; 
-  font-weight: bold; 
-  color: #000; 
-  transition: transform 0.3s ease, background-color 0.3s ease; 
+.habilidad {
+  background-color: #fff;
+  border: 2px solid #f3e08c;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  width: 250px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-#habilidades li:hover {
-  transform: scale(1.05); 
-  background-color: #e2e3da; 
+.habilidad:hover {
+  transform: scale(1.05);
+  background-color: #e2e3da;
+}
+
+@media (max-width: 480px) {
+  .habilidad {
+    width: 100%;
+  }
 }
 
 #proyectos {
@@ -213,6 +222,7 @@ textarea:focus {
 
 button.boton {
   display: inline-block;
+  margin-top: 1rem;
   background-color: #eacc86;
   color: #000;
   padding: 0.8rem 1.5rem;

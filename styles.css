@@ -5,84 +5,84 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif; 
-  line-height: 1.6; 
-  color: #333; 
-  background-color: #ffffff; 
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
 }
 
 a {
-  text-decoration: none; 
-  color: #333; 
+  text-decoration: none;
+  color: #333;
 }
 
 a:hover {
-  color: #f1db87; 
+  color: #f1db87;
 }
 
 header {
-  background-color: #eacc86; 
-  position: sticky; 
-  top: 0; 
-  z-index: 100; 
-  padding: 1rem 2rem; 
+  background-color: #eacc86;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
 }
 
 header h1 {
-  font-size: 1.5rem; 
-  color: #000; 
+  font-size: 1.5rem;
+  color: #000;
   font-weight: bold;
 }
 
 nav ul {
-  list-style: none; 
-  display: flex; 
-  justify-content: flex-end; 
-  gap: 1.5rem; 
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
 }
 
 nav a {
-  color: #000; 
+  color: #000;
   font-weight: 600;
-  transition: color 0.3s ease; 
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #e2e3da; 
+  color: #e2e3da;
 }
 
 #inicio {
-  padding: 5rem 2rem; 
-  text-align: center; 
-  background-color: #f3e4a5; 
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: #f3e4a5;
 }
 
 #inicio p {
-  max-width: 800px; 
-  margin: 0 auto; 
-  font-size: 1.1rem; 
-  line-height: 1.8; 
-  color: #333; 
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
 }
 
 #sobre-mi {
-  padding: 4rem 2rem; 
-  background-color: #fff; 
-  color: #333; 
+  padding: 4rem 2rem;
+  background-color: #fff;
+  color: #333;
 }
 
 #sobre-mi h2 {
-  text-align: center; 
-  font-size: 2rem; 
-  margin-bottom: 2rem; 
-  color: #000; 
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #000;
 }
 
 #sobre-mi p {
-  max-width: 800px; 
-  margin: 0 auto 1rem auto; 
-  line-height: 1.8; 
-  text-align: justify; 
+  max-width: 800px;
+  margin: 0 auto 1rem auto;
+  line-height: 1.8;
+  text-align: justify;
 }
 
 #habilidades {
@@ -138,23 +138,58 @@ nav a:hover {
 
 #proyectos h2 {
   font-size: 2rem;
-  color: #000; 
+  color: #000;
   margin-bottom: 2rem;
 }
 
-#proyectos article {
+.proyecto {
   max-width: 800px;
-  margin: 1rem auto;
-  background-color: #fff;
+  margin: 2rem auto;
   padding: 1.5rem;
-  border: 2px solid #f3e08c; 
+  border: 2px solid #f3e08c;
   border-radius: 10px;
-  text-align: left;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-#proyectos h3 {
-  color: #000; 
-  margin-bottom: 0.5rem;
+.proyecto figure {
+  margin: 0;
+}
+
+.proyecto img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #f3e08c;
+}
+
+.proyecto figcaption {
+  font-weight: bold;
+  color: #000;
+  margin-top: 0.5rem;
+}
+
+.proyecto p {
+  color: #333;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .proyecto {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .proyecto figure {
+    flex: 1;
+  }
+
+  .proyecto p {
+    flex: 1;
+  }
 }
 
 #contacto {
@@ -176,7 +211,6 @@ nav a:hover {
   border-left: 4px solid #eacc86;
   padding: 0.9rem 1.2rem;
   color: #333;
-  font-style: italic;
   border-radius: 6px;
   text-align: left;
 }
@@ -238,11 +272,30 @@ button.boton:hover {
   transform: translateY(-2px);
 }
 
-@media (max-width: 480px) {
-  form { padding: 0 1rem; }
-  #contacto aside { padding: 0.7rem; }
+a.boton {
+  display: inline-block;
+  background-color: #eacc86;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.25s ease, transform 0.15s ease;
 }
 
+a.boton:hover {
+  background-color: #f1db87;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 0 1rem;
+  }
+
+  #contacto aside {
+    padding: 0.7rem;
+  }
+}
 
 footer {
   background-color: #eacc86;
@@ -250,4 +303,18 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+h2 + p {
+  margin-top: 0.8rem;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #eacc86;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }

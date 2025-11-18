@@ -1,12 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -62,8 +60,12 @@ nav a:hover {
   background-color: #f3e4a5;
 }
 
-#inicio h2 {
-  margin-bottom: 1rem;
+#inicio p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
 }
 
 #sobre-mi {
@@ -79,10 +81,23 @@ nav a:hover {
   color: #000;
 }
 
+#sobre-mi p {
+  max-width: 800px;
+  margin: 0 auto 1rem auto;
+  line-height: 1.8;
+  text-align: justify;
+}
+
 #habilidades {
   background-color: #f3e4a5;
   padding: 4rem 2rem;
   text-align: center;
+}
+
+#habilidades h2 {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 2rem;
 }
 
 .contenedor-habilidades {
@@ -102,7 +117,9 @@ nav a:hover {
   width: 250px;
   text-align: center;
   font-weight: bold;
-  transition: 0.3s;
+  font-size: 1rem;
+  color: #000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .habilidad:hover {
@@ -110,10 +127,22 @@ nav a:hover {
   background-color: #e2e3da;
 }
 
+@media (max-width: 480px) {
+  .habilidad {
+    width: 100%;
+  }
+}
+
 #proyectos {
   background-color: #fff;
   padding: 4rem 2rem;
   text-align: center;
+}
+
+#proyectos h2 {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 2rem;
 }
 
 .proyecto {
@@ -128,10 +157,42 @@ nav a:hover {
   gap: 1rem;
 }
 
+.proyecto figure {
+  margin: 0;
+}
+
 .proyecto img {
   width: 100%;
   border-radius: 10px;
   border: 2px solid #f3e08c;
+}
+
+.proyecto figcaption {
+  font-weight: bold;
+  color: #000;
+  margin-top: 0.5rem;
+}
+
+.proyecto p {
+  color: #333;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .proyecto {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .proyecto figure {
+    flex: 1;
+  }
+
+  .proyecto p {
+    flex: 1;
+  }
 }
 
 #contacto {
@@ -140,14 +201,27 @@ nav a:hover {
   text-align: center;
 }
 
+#contacto h2 {
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 #contacto aside {
   max-width: 800px;
-  margin: 0 auto 1rem auto;
-  background-color: #fff;
+  margin: 0 auto 1.2rem auto;
+  background-color: rgb(255, 255, 255);
   border-left: 4px solid #eacc86;
-  padding: 1rem;
+  padding: 0.9rem 1.2rem;
+  color: #333;
   border-radius: 6px;
   text-align: left;
+}
+
+#contacto p {
+  max-width: 800px;
+  margin: 0.4rem auto;
+  color: #333;
 }
 
 form {
@@ -159,28 +233,71 @@ form {
   text-align: left;
 }
 
-input,
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
 textarea {
   width: 100%;
   padding: 0.8rem;
   border: 2px solid #f3e08c;
   border-radius: 8px;
+  font-size: 1rem;
   outline: none;
+  box-sizing: border-box;
 }
 
-input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
 textarea:focus {
   border-color: #eacc86;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-.boton {
+button.boton {
+  display: inline-block;
+  margin-top: 1rem;
   background-color: #eacc86;
   color: #000;
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+button.boton:hover {
+  background-color: #f1db87;
+  transform: translateY(-2px);
+}
+
+a.boton {
   display: inline-block;
+  background-color: #eacc86;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+a.boton:hover {
+  background-color: #f1db87;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 0 1rem;
+  }
+
+  #contacto aside {
+    padding: 0.7rem;
+  }
 }
 
 footer {
@@ -191,15 +308,16 @@ footer {
   font-size: 0.9rem;
 }
 
-
-nav ul {
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
+h2 + p {
+  margin-top: 0.8rem;
 }
 
-nav ul li {
-  flex: 1 1 auto;
-  display: flex;
-  justify-content: center;
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #eacc86;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
